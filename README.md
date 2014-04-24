@@ -33,7 +33,8 @@ For this example, the following would be valid output:
 
 (Note that your output is a sequence of array indices, not a sequence of hop lengths.)
 
-- Your program may be written in the language of your choice. - It must accept a single command-line argument, which is the path to a file containing the input data 
+- Your program may be written in the language of your choice. 
+- It must accept a single command-line argument, which is the path to a file containing the input data 
 (the array of integers). Your program must not read that path from STDIN or the console. 
 - The input file will contain the array for a single problem. 
 	- One integer per line, with no brackets or commas. 
@@ -49,6 +50,8 @@ followed by a newline character.
 | ArrayHopperAppTest.java | Tests to run through various input sets |
 
 
+## Note:
+This solution assumes that the cost in hopping from one array index to another is constant through all array indices and will not dependent upon the difference between indices.
 
 ##Dependencies
 This project depends on the following:
