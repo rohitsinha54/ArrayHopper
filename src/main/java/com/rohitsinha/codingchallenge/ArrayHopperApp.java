@@ -101,7 +101,7 @@ public class ArrayHopperApp {
 				hops.add(String.valueOf(selIndex));
 			}
 			int sum = i + array.get(i);    // update current reach
-			if (sum > curReach) selIndex = i;
+			if (!landOnZero(array, sum) && sum > curReach) selIndex = i;
 			curReach = Math.max(curReach, sum);
 		}
 		if ((i > lReach) && (hops.size() > 0) && (Integer.parseInt(hops.get(hops.size() - 1)) != selIndex)) {
@@ -115,4 +115,17 @@ public class ArrayHopperApp {
 		else
 			return null;
 	}
+
+	/**
+	* Function to check if array[index] has a value of zero
+	*
+	* @param array: the array containing integers
+	*        index: the index of the array to be checked
+	* @return : true if index contains value of zero otherwise return false
+	*/
+    private boolean landOnZero(List<Integer> array, int index) {
+      if (index >= array.size() - 1)
+         return false;
+      return array.get(index) == 0;
+    }
 }
